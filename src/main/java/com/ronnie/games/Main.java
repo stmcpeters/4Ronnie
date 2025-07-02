@@ -1,3 +1,5 @@
+package com.ronnie.games;
+
 import java.util.Scanner;
 
 public class Main {
