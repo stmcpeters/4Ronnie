@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class HiLo {
+public class GuessANumber {
     public static void main(String[] args) throws Exception {
         // variables
         int input = 0;
@@ -13,8 +13,8 @@ public class HiLo {
         Scanner scanner = new Scanner(System.in);
 
         // prompt for user to guess a number from 1-100
-        System.out.println("Hello and welcome to HiLo!");
-        System.out.print("Please enter a number from 1-100:     ");
+        System.out.println("Hello and welcome to Guess a Number!");
+        System.out.print("Guess a number between 1 and 100:     ");
 
         // call method to generate a random number
         randomNum = generateRandomNumber();
@@ -59,7 +59,7 @@ public class HiLo {
         if(input > 0 && input <= 100){
             return input;
         } else {
-            throw new Exception("please enter a valid number");
+            throw new Exception("Guess must be within 1 and 100. Try again!");
         }
     }
 
@@ -68,11 +68,11 @@ public class HiLo {
         // display if the number is higher/lower/equal
         // if numbers not equal have user guess until correct -- while loop?
         if (userGuess < randomNum){
-            return "your guess is lower. try again!";
+            return userGuess + " is too low. Try again!";
         } else if (userGuess > randomNum){
-            return "your guess is higher. try again!";
+            return userGuess + " is too high. Try again!";
         } else {
-            return "you guessed correct! the number was " + userGuess;
+            return userGuess + " is correct! You win!";
         }
     }
 
